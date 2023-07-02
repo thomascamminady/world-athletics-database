@@ -33,7 +33,7 @@ def parse_event_women(event):
 
 
 if __name__ == "__main__":
-    with open("notebooks/options.json", "r") as f:
+    with open("data/options.json") as f:
         data = json.load(f)
 
     events_male = data[7]["cases"][0]["values"]
