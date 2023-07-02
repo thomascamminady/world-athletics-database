@@ -2,6 +2,10 @@
 World Athletics Database
 ========================
 
+.. code-block:: bash
+
+   poetry run python world_athletics_database/parse.py # takes 20 minutes
+   poetry run python world_athletics_database/postprocess.py # fast
 
 
 
