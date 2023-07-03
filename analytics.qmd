@@ -12,27 +12,32 @@ import altair as alt
 from camminapy.plot import altair_theme
 
 altair_theme()
-df = pl.read_csv("data/data.csv", separator=";")
-
-alt.Chart(
-    df.filter(pl.col("Event") == "Marathon")
+df = (
+    pl.read_csv("data/data.csv", separator=";")
+    .filter(pl.col("Event") == "Marathon")
     .groupby("Sex")
     .head(10)
     .with_columns(Hours=pl.col("Mark [meters or seconds]") / 3600)
-).mark_line(point=True).encode(
-    x="Rank:N",
-    y=alt.Y("Hours:Q").scale(zero=False),
-    color=alt.Color("Sex:N")
-    .scale(domain=["female", "male"], range=["purple", "orange"])
-    .title(None)
-    .legend(None),
-    row=alt.Row("Sex:N").title(None),
-    tooltip=[f"{c}:N" for c in df.columns],
-).properties(
-    width=400
-).resolve_scale(
-    y="independent"
-).interactive()
+)
+
+chart = (
+    alt.Chart(df)
+    .mark_line(point=True)
+    .encode(
+        x="Rank:N",
+        y=alt.Y("Hours:Q").scale(zero=False),
+        color=alt.Color("Sex:N")
+        .scale(domain=["female", "male"], range=["purple", "orange"])
+        .title(None)
+        .legend(None),
+        row=alt.Row("Sex:N").title(None),
+        tooltip=[f"{c}:N" for c in df.columns],
+    )
+    .properties(width=400)
+    .resolve_scale(y="independent")
+    .interactive()
+)
+chart
 
 ```
 
