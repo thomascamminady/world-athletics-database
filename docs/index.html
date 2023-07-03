@@ -107,13 +107,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#world-athletics-database" id="toc-world-athletics-database" class="nav-link active" data-scroll-target="#world-athletics-database"><span class="header-section-number">1</span> World Athletics Database</a>
-  <ul class="collapse">
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><span class="header-section-number">1.1</span> Getting Started</a></li>
-  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary"><span class="header-section-number">1.2</span> Data Dictionary</a></li>
-  <li><a href="#data-sample" id="toc-data-sample" class="nav-link" data-scroll-target="#data-sample"><span class="header-section-number">1.3</span> Data Sample</a></li>
-  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits"><span class="header-section-number">1.4</span> Credits</a></li>
-  </ul></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"><span class="header-section-number">1</span> Getting Started</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary"><span class="header-section-number">2</span> Data Dictionary</a></li>
+  <li><a href="#data-sample" id="toc-data-sample" class="nav-link" data-scroll-target="#data-sample"><span class="header-section-number">3</span> Data Sample</a></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits"><span class="header-section-number">4</span> Credits</a></li>
   </ul>
 </nav>
     </div>
@@ -122,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">world-athletics-database</h1>
+<h1 class="title">World Athletics Database</h1>
 </div>
 
 
@@ -137,11 +134,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="world-athletics-database" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> World Athletics Database</h1>
 <p>Some 400k athlete performances for various events scraped from <a href="https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior">World Athletics</a>.</p>
-<section id="getting-started" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1.1</span> Getting Started</h2>
+<section id="getting-started" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">1</span> Getting Started</h2>
 <p>First, clone the repository and navigate to the project directory. Then, install the necessary dependencies:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">make</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next, you can parse and post-process the data:</p>
@@ -149,8 +144,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2"></a>poetry run python world_athletics_database<span class="op">/</span>postprocess.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Note:</strong> Parsing the data may take up to 20 minutes.</p>
 </section>
-<section id="data-dictionary" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="data-dictionary"><span class="header-section-number">1.2</span> Data Dictionary</h2>
+<section id="data-dictionary" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="data-dictionary"><span class="header-section-number">2</span> Data Dictionary</h2>
 <ul>
 <li><strong>Rank</strong>: The rank of the record.</li>
 <li><strong>Mark</strong>: The mark or result of the event.</li>
@@ -167,8 +162,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Sex</strong>: The competitor’s sex.</li>
 </ul>
 </section>
-<section id="data-sample" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="data-sample"><span class="header-section-number">1.3</span> Data Sample</h2>
+<section id="data-sample" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="data-sample"><span class="header-section-number">3</span> Data Sample</h2>
 <p>Here’s all the world record performances that are stored in the data set, sorted by date.</p>
 <div class="cell" data-execution_count="1">
 <details>
@@ -891,12 +886,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="credits" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="credits"><span class="header-section-number">1.4</span> Credits</h2>
+<section id="credits" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="credits"><span class="header-section-number">4</span> Credits</h2>
 <p>This package was created with <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> and <a href="https://github.com/thomascamminady/cookiecutter-pypackage">thomascamminady/cookiecutter-pypackage</a>, a fork of the <a href="https://github.com/audreyr/cookiecutter-pypackage">audreyr/cookiecutter-pypackage</a> project template.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

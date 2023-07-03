@@ -1,5 +1,4 @@
 ---
-title: "world-athletics-database"
 jupyter: python3
 
 ---
