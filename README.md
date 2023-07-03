@@ -1,5 +1,5 @@
 # World Athletics Database
-Some 400k athlete performances for various events scraped from https://worldathletics.org.
+Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
 ## TL;DR
 
