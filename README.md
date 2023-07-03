@@ -1,5 +1,5 @@
 # World Athletics Database
-Athlete performances for various events scraped from https://worldathletics.org.
+Some 400k athlete performances for various events scraped from https://worldathletics.org.
 
 ## TL;DR
 
