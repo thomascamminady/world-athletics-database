@@ -14,7 +14,7 @@ format:
     code-fold: true
     code-line-numbers: true
     theme:
-      - minty
+      - default
 
 
 
@@ -25,3 +25,4 @@ website:
   navbar:
     right:
       - index.qmd
+      - analytics.qmd
