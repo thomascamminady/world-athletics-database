@@ -162,3 +162,7 @@ cython_debug/
 logs/
 .venv/
 logs/
+
+/.quarto/
+
+/.luarc.json

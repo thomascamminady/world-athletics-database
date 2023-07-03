@@ -1,0 +1,11 @@
+
+project:
+  title: "world-athletics-database"
+  output-dir: _output
+
+toc: false
+number-sections: true
+
+format:
+  html:
+    html-math-method: katex
