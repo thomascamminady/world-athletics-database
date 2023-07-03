@@ -15,3 +15,13 @@ format:
     code-line-numbers: true
     theme:
       - minty
+
+
+
+website:
+  title: "World Athletics Database"
+  open-graph: true
+
+  navbar:
+    right:
+      - index.qmd
