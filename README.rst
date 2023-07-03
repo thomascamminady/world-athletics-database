@@ -14,7 +14,7 @@ Data
 --------
 
 .. csv-table:: Table Title
-   :file: data/worldrecords.csv
+   :file: https://raw.githubusercontent.com/thomascamminady/world-athletics-database/main/data/worldrecords.csv
    :widths: 30, 70
    :header-rows: 1
 
