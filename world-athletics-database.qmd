@@ -3,6 +3,7 @@ title: "world-athletics-database"
 ---
 
 # World Athletics Database
+Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
 
 
