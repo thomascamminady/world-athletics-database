@@ -14,24 +14,7 @@ pd.read_csv(
 ```
 
 
-## Getting Started
-
-First, clone the repository and navigate to the project directory. Then, install the necessary dependencies:
-
-```bash
-make init
-```
-
-Next, you can parse and post-process the data:
-
-```python
-poetry run python world_athletics_database/parse.py
-poetry run python world_athletics_database/postprocess.py
-```
-
-**Note:** Parsing the data may take up to 20 minutes.
-
-## Data Dictionary
+## Data Fields
 
 - **Rank**: The rank of the record.
 - **Mark**: The mark or result of the event.
@@ -140,6 +123,26 @@ Here's all the world record performances that are stored in the data set.
 | 84 |      1 | 7:52.11    | Lamecha GIRMA            | 2000-11-26 00:00:00 | ETH   | 1     | Stade Charléty, Paris (FRA)                    | 2023-06-09 00:00:00 |            1295 |                      472.1 | 3000 Metres Steeplechase |  nan   | male   |
 | 85 |      1 | 7:54.10    | Jakob INGEBRIGTSEN       | 2000-09-19 00:00:00 | NOR   | 1     | Stade Charléty, Paris (FRA)                    | 2023-06-09 00:00:00 |            1304 |                      474.1 | Two Miles                |  nan   | male   |
 | 86 |      1 | 14:05.20   | Faith KIPYEGON           | 1994-01-10 00:00:00 | KEN   | 1     | Stade Charléty, Paris (FRA)                    | 2023-06-09 00:00:00 |            1272 |                      845.2 | 5000 Metres              |  nan   | female |
+
+
+
+## Develop
+
+First, clone the repository and navigate to the project directory. Then, install the necessary dependencies:
+
+```bash
+make init
+```
+
+Next, you can parse and post-process the data:
+
+```python
+poetry run python world_athletics_database/parse.py
+poetry run python world_athletics_database/postprocess.py
+```
+
+**Note:** Parsing the data may take up to 20 minutes.
+
 
 ## Credits
 
