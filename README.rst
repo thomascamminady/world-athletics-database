@@ -10,6 +10,13 @@ World Athletics Database
 
 
 
+Data
+--------
+
+.. csv-table:: Table Title
+   :file: data/worldrecords.csv
+   :widths: 30, 70
+   :header-rows: 1
 
 Development
 --------
