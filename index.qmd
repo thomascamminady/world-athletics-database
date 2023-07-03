@@ -44,15 +44,21 @@ poetry run python world_athletics_database/postprocess.py
 
 ## Data Sample
 
-Here's all the world record performances that are stored in the data set.
+Here's all the world record performances that are stored in the data set, sorted by date.
 ```{python}
 import pandas as pd
 from IPython.display import Markdown
 from tabulate import tabulate
 
-df = pd.read_csv("data/data.csv", delimiter=";")
+df = pd.read_csv("data/data.csv", delimiter=";", parse_dates=True)
 
-Markdown(tabulate(df.loc[df["Rank"] == 1][["Event", "Competitor", "Mark", "Sex"]]))
+Markdown(
+    tabulate(
+        df.loc[df["Rank"] == 1][
+            ["Event", "Competitor", "Mark", "Sex", "Date"]
+        ].sort_values("Date")
+    )
+)
 
 ```
 
