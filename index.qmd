@@ -5,7 +5,6 @@ title: About
 
 Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
-Go to [Github](https://github.com/thomascamminady/world-athletics-database) to look at the source code of this project.
 
 
 ## Getting Started

@@ -26,3 +26,5 @@ website:
     right:
       - index.qmd
       - analytics.qmd
+      - icon: github
+        href: https://github.com/thomascamminady/world-athletics-database
