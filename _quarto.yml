@@ -1,12 +1,17 @@
 
 project:
+  type: website
   title: "world-athletics-database"
   output-dir: docs
 
 
-toc: false
+toc: true
 number-sections: true
 
 format:
   html:
-    html-math-method: katex
+    page-layout: article
+    code-fold: true
+    code-line-numbers: true
+    theme:
+      - minty

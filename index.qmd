@@ -1,0 +1,61 @@
+---
+title: "world-athletics-database"
+jupyter: python3
+
+---
+
+# World Athletics Database
+Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
+
+
+
+## Getting Started
+
+First, clone the repository and navigate to the project directory. Then, install the necessary dependencies:
+
+```bash
+make init
+```
+
+Next, you can parse and post-process the data:
+
+```python
+poetry run python world_athletics_database/parse.py
+poetry run python world_athletics_database/postprocess.py
+```
+
+**Note:** Parsing the data may take up to 20 minutes.
+
+## Data Dictionary
+
+- **Rank**: The rank of the record.
+- **Mark**: The mark or result of the event.
+- **Competitor**: The name of the competitor.
+- **DOB**: The date of birth of the competitor.
+- **Nat**: The nationality of the competitor.
+- **Pos**: The position of the competitor.
+- **Venue**: The venue where the event took place.
+- **Date**: The date when the record was made.
+- **Results Score**: The score of the results.
+- **Mark [metres or seconds]**: The mark of the event in metres or seconds.
+- **Event**: The name of the event.
+- **Wind**: The wind speed during the event.
+- **Sex**: The competitor's sex.
+
+## Data Sample
+
+Here's all the world record performances that are stored in the data set.
+```{python}
+import pandas as pd
+from IPython.display import Markdown
+from tabulate import tabulate
+
+df = pd.read_csv("data/data.csv", delimiter=";")
+
+Markdown(tabulate(df.loc[df["Rank"] == 1][["Event", "Competitor", "Mark", "Sex"]]))
+
+```
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and [thomascamminady/cookiecutter-pypackage](https://github.com/thomascamminady/cookiecutter-pypackage), a fork of the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
