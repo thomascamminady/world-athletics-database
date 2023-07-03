@@ -1,5 +1,17 @@
 # World Athletics Database
+Athlete performances for various events scraped from https://worldathletics.org.
 
+## TL;DR
+
+Get the data using `pandas`
+```python
+import pandas as pd
+
+pd.read_csv(
+    "https://raw.githubusercontent.com/thomascamminady/world-athletics-database/main/data/data.csv",
+    delimiter=";",
+)
+```
 
 
 ## Getting Started
