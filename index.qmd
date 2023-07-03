@@ -1,9 +1,8 @@
 ---
 jupyter: python3
-
+title: World Athletics Database
 ---
 
-# World Athletics Database
 Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
 
@@ -60,7 +59,3 @@ Markdown(
 )
 
 ```
-
-## Credits
-
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and [thomascamminady/cookiecutter-pypackage](https://github.com/thomascamminady/cookiecutter-pypackage), a fork of the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
