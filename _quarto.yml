@@ -1,7 +1,8 @@
 
 project:
   title: "world-athletics-database"
-  output-dir: _output
+  output-dir: docs
+
 
 toc: false
 number-sections: true
