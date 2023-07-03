@@ -64,7 +64,7 @@ def postprocess():
                 pl.col("Date").str.strptime(pl.Date, format="%d %b %Y", strict=False),
             )
         )
-        df.write_csv(f"./data/{sex}.csv")
+        df.write_parquet(f"./data/{sex}.parquet")
 
 
 if __name__ == "__main__":

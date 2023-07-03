@@ -160,6 +160,26 @@ files = [
 beautifulsoup4 = "*"
 
 [[package]]
+name = "camminapy"
+version = "1.1.0"
+description = "My personal code collection."
+optional = false
+python-versions = ">=3.9,<4"
+files = [
+    {file = "camminapy-1.1.0-py3-none-any.whl", hash = "sha256:846e580cfb6b0fa35c3c4fd7cbefe9143cd77e3616d685e7f98a83b77521926e"},
+    {file = "camminapy-1.1.0.tar.gz", hash = "sha256:5cee75f427f4da7d91b8630f1f7cffa1ef6d1c7a13b3dbbc5da893f35aac3c00"},
+]
+
+[package.dependencies]
+altair = ">=5.0.0,<6.0.0"
+gitpython = ">=3.1.31,<4.0.0"
+pdoc = ">=13.1.1,<14.0.0"
+polars = ">=0.17.15"
+pyarrow = ">=12.0.0,<13.0.0"
+rich = ">=13.3.5,<14.0.0"
+toolz = ">=0.12.0,<0.13.0"
+
+[[package]]
 name = "cffi"
 version = "1.15.1"
 description = "Foreign Function Interface for Python calling C code."
@@ -582,6 +602,34 @@ type1 = ["xattr"]
 ufo = ["fs (>=2.2.0,<3)"]
 unicode = ["unicodedata2 (>=15.0.0)"]
 woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
+
+[[package]]
+name = "gitdb"
+version = "4.0.10"
+description = "Git Object Database"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "gitdb-4.0.10-py3-none-any.whl", hash = "sha256:c286cf298426064079ed96a9e4a9d39e7f3e9bf15ba60701e95f5492f28415c7"},
+    {file = "gitdb-4.0.10.tar.gz", hash = "sha256:6eb990b69df4e15bad899ea868dc46572c3f75339735663b81de79b06f17eb9a"},
+]
+
+[package.dependencies]
+smmap = ">=3.0.1,<6"
+
+[[package]]
+name = "gitpython"
+version = "3.1.31"
+description = "GitPython is a Python library used to interact with Git repositories"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "GitPython-3.1.31-py3-none-any.whl", hash = "sha256:f04893614f6aa713a60cbbe1e6a97403ef633103cdd0ef5eb6efe0deb98dbe8d"},
+    {file = "GitPython-3.1.31.tar.gz", hash = "sha256:8ce3bcf69adfdf7c7d503e78fd3b1c492af782d58893b650adb2ac8912ddd573"},
+]
+
+[package.dependencies]
+gitdb = ">=4.0.1,<5"
 
 [[package]]
 name = "html5lib"
@@ -1355,6 +1403,25 @@ files = [
 ]
 
 [[package]]
+name = "pdoc"
+version = "13.1.1"
+description = "API Documentation for Python Projects"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pdoc-13.1.1-py3-none-any.whl", hash = "sha256:9025c6cd2448b18662e88eacf84c6eb050dcbdc8ee5259aee5e40a1c2b417840"},
+    {file = "pdoc-13.1.1.tar.gz", hash = "sha256:2b8e341b1882ed8217e95c1f3f1f11d34f9ef93a5796287590162e2035296815"},
+]
+
+[package.dependencies]
+Jinja2 = ">=2.11.0"
+MarkupSafe = "*"
+pygments = ">=2.12.0"
+
+[package.extras]
+dev = ["black", "hypothesis", "mypy", "pygments (>=2.14.0)", "pytest", "pytest-cov", "pytest-timeout", "ruff", "tox", "types-pygments"]
+
+[[package]]
 name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
@@ -2106,6 +2173,17 @@ files = [
 ]
 
 [[package]]
+name = "smmap"
+version = "5.0.0"
+description = "A pure Python implementation of a sliding window memory map manager"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "smmap-5.0.0-py3-none-any.whl", hash = "sha256:2aba19d6a040e78d8b09de5c57e96207b09ed71d8e55ce0959eeee6c8e190d94"},
+    {file = "smmap-5.0.0.tar.gz", hash = "sha256:c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936"},
+]
+
+[[package]]
 name = "soupsieve"
 version = "2.4.1"
 description = "A modern CSS selector implementation for Beautiful Soup."
@@ -2259,4 +2337,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "4e29a9c986878dc32d6f6a35e921331b44c6a4bff92a69c70e809bb894c8ccec"
+content-hash = "a12602f2cc2406be8ccc3a4f32b79a5487ec51a89f5d3d8c7f340031333a3979"
