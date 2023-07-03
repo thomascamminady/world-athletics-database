@@ -15,8 +15,6 @@ html5lib = "^1.1"
 pyarrow = "^12.0.1"
 bs4 = "^0.0.1"
 camminapy = "^1.1.0"
-streamlit = "^1.24.0"
-watchdog = "^3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.0.1"
