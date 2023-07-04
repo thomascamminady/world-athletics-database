@@ -35,7 +35,7 @@ These are the columns that are directly extracted from the Word Athletics databa
 - `Venue`: The venue where the event took place.
 - `Date`: The date when the record was made.
 - `Results Score`: The score of the results.
-- `Mark [metres or seconds]`: The mark of the event in metres or seconds.
+- `Mark [meters or seconds]`: The mark of the event in metres or seconds.
 - `Event`: The name of the event.
 - `Wind`: The wind speed during the event.
 - `Sex`: The competitor's sex.
@@ -43,6 +43,8 @@ These are the columns that are directly extracted from the Word Athletics databa
 ## Data Sample
 
 Here's all the world record performances that are stored in the data set, sorted by date.
+
+First all world records for the women.
 ```{python}
 import pandas as pd
 from IPython.display import Markdown
@@ -52,8 +54,24 @@ df = pd.read_csv("data/data.csv", delimiter=";", parse_dates=True)
 
 Markdown(
     tabulate(
-        df.loc[df["Rank"] == 1][
-            ["Event", "Competitor", "Mark", "Sex", "Date"]
+        df.loc[(df["Rank"] == 1) & (df["Sex"] == "female")][
+            ["Event", "Competitor", "Mark", "Date"]
+        ].sort_values("Date")
+    )
+)
+
+```
+
+Next, all world records for the men.
+
+```{python}
+
+df = pd.read_csv("data/data.csv", delimiter=";", parse_dates=True)
+
+Markdown(
+    tabulate(
+        df.loc[(df["Rank"] == 1) & (df["Sex"] == "male")][
+            ["Event", "Competitor", "Mark", "Date"]
         ].sort_values("Date")
     )
 )
