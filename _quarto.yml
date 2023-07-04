@@ -5,7 +5,7 @@ project:
   output-dir: docs
 
 book:
-  title: "world-athletics-database"
+  title: "World Athletics Database as a CSV file"
   author: "Thomas Camminady"
   date: "7/04/2023"
   chapters:
