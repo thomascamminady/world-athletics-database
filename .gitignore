@@ -166,3 +166,6 @@ logs/
 /.quarto/
 
 /.luarc.json
+
+/.quarto/
+/_site/
