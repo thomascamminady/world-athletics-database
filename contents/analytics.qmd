@@ -1,6 +1,6 @@
 ---
 jupyter: python3
-title: A first dive into the data
+title: A deeper dive --- looking at the Marathon
 ---
 
 Let's play around with the data a little bit.
@@ -15,7 +15,7 @@ from camminapy.plot import altair_theme
 
 altair_theme()
 df = (
-    pl.read_csv("data/data.csv", separator=";")
+    pl.read_csv("../data/data.csv", separator=";")
     .filter(pl.col("Event") == "Marathon")
     .groupby("Sex")
     .head(10)
@@ -54,7 +54,7 @@ We can also look at how world records have progressed over time.
 ```{python}
 # | column: screen-inset-shaded
 wr = (
-    pl.read_csv("data/data.csv", separator=";", try_parse_dates=True)
+    pl.read_csv("../data/data.csv", separator=";", try_parse_dates=True)
     .sort("Sex", "Event", "Date")
     .with_columns((pl.col("Mark [meters or seconds]") / 3600).alias("Hours"))
     .with_columns(

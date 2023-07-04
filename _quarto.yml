@@ -10,8 +10,9 @@ book:
   date: "7/04/2023"
   chapters:
     - index.qmd
-    - analytics.qmd
-    - about_me.qmd
+    - contents/stats.ipynb
+    - contents/analytics.qmd
+    - contents/about_me.qmd
   twitter-card: true
   site-url: https://thomascamminady.github.io/world-athletics-database/
 execute:
