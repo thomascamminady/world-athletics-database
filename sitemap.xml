@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thomascamminady.github.io/world-athletics-database/index.html</loc>
-    <lastmod>2023-07-04T07:13:45.178Z</lastmod>
+    <lastmod>2023-07-04T08:55:14.675Z</lastmod>
   </url>
   <url>
-    <loc>https://thomascamminady.github.io/world-athletics-database/analytics.html</loc>
-    <lastmod>2023-07-04T07:13:45.185Z</lastmod>
+    <loc>https://thomascamminady.github.io/world-athletics-database/contents/stats.html</loc>
+    <lastmod>2023-07-04T08:55:14.685Z</lastmod>
   </url>
   <url>
-    <loc>https://thomascamminady.github.io/world-athletics-database/about_me.html</loc>
-    <lastmod>2023-07-04T07:13:45.186Z</lastmod>
+    <loc>https://thomascamminady.github.io/world-athletics-database/contents/analytics.html</loc>
+    <lastmod>2023-07-04T08:55:14.692Z</lastmod>
+  </url>
+  <url>
+    <loc>https://thomascamminady.github.io/world-athletics-database/contents/about_me.html</loc>
+    <lastmod>2023-07-04T08:55:14.693Z</lastmod>
   </url>
 </urlset>

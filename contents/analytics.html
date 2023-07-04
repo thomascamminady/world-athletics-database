@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>World Athletics Database as a CSV File - 2&nbsp; A first dive into the data</title>
+<title>World Athletics Database as a CSV File - 3&nbsp; A deeper dive — looking at the Marathon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,24 +57,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./about_me.html" rel="next">
-<link href="./index.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../contents/about_me.html" rel="next">
+<link href="../contents/stats.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta name="twitter:title" content="World Athletics Database as a CSV File - 2&nbsp; A first dive into the data">
+<meta name="twitter:title" content="World Athletics Database as a CSV File - 3&nbsp; A deeper dive — looking at the Marathon">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analytics.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A first dive into the data</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/analytics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A deeper dive --- looking at the Marathon</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">World Athletics Database as a CSV File</a> 
+      <a href="../">World Athletics Database as a CSV File</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -140,20 +140,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analytics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A first dive into the data</span></span></a>
+  <a href="../contents/stats.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting to know the data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about_me.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hello, it’s me!</span></span></a>
+  <a href="../contents/analytics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A deeper dive — looking at the Marathon</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/about_me.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hello, it’s me!</span></span></a>
   </div>
 </li>
     </ul>
@@ -169,7 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A first dive into the data</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">A deeper dive — looking at the Marathon</span></h1>
 </div>
 
 
@@ -195,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5"></a></span>
 <span id="cb1-6"><a href="#cb1-6"></a>altair_theme()</span>
 <span id="cb1-7"><a href="#cb1-7"></a>df <span class="op">=</span> (</span>
-<span id="cb1-8"><a href="#cb1-8"></a>    pl.read_csv(<span class="st">"data/data.csv"</span>, separator<span class="op">=</span><span class="st">";"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    pl.read_csv(<span class="st">"../data/data.csv"</span>, separator<span class="op">=</span><span class="st">";"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9"></a>    .<span class="bu">filter</span>(pl.col(<span class="st">"Event"</span>) <span class="op">==</span> <span class="st">"Marathon"</span>)</span>
 <span id="cb1-10"><a href="#cb1-10"></a>    .groupby(<span class="st">"Sex"</span>)</span>
 <span id="cb1-11"><a href="#cb1-11"></a>    .head(<span class="dv">10</span>)</span>
@@ -225,26 +231,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-35"><a href="#cb1-35"></a>    chart, chart.mark_text(dy<span class="op">=-</span><span class="dv">10</span>, dx<span class="op">=</span><span class="dv">10</span>, angle<span class="op">=</span><span class="dv">320</span>).encode(text<span class="op">=</span><span class="st">"Last Name:N"</span>)</span>
 <span id="cb1-36"><a href="#cb1-36"></a>).facet(column<span class="op">=</span><span class="st">"Sex:N"</span>).resolve_scale(y<span class="op">=</span><span class="st">"independent"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display column-screen-inset-shaded" data-execution_count="5">
+<div class="cell-output cell-output-display column-screen-inset-shaded" data-execution_count="1">
 
 <style>
-  #altair-viz-4558f384f0f747e2989d187060331464.vega-embed {
+  #altair-viz-c6303afeca2d4dada500105fa02fb9d7.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-4558f384f0f747e2989d187060331464.vega-embed details,
-  #altair-viz-4558f384f0f747e2989d187060331464.vega-embed details summary {
+  #altair-viz-c6303afeca2d4dada500105fa02fb9d7.vega-embed details,
+  #altair-viz-c6303afeca2d4dada500105fa02fb9d7.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-4558f384f0f747e2989d187060331464"></div>
+<div id="altair-viz-c6303afeca2d4dada500105fa02fb9d7"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-4558f384f0f747e2989d187060331464") {
-      outputDiv = document.getElementById("altair-viz-4558f384f0f747e2989d187060331464");
+    if (outputDiv.id !== "altair-viz-c6303afeca2d4dada500105fa02fb9d7") {
+      outputDiv = document.getElementById("altair-viz-c6303afeca2d4dada500105fa02fb9d7");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -299,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>wr <span class="op">=</span> (</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    pl.read_csv(<span class="st">"data/data.csv"</span>, separator<span class="op">=</span><span class="st">";"</span>, try_parse_dates<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    pl.read_csv(<span class="st">"../data/data.csv"</span>, separator<span class="op">=</span><span class="st">";"</span>, try_parse_dates<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>    .sort(<span class="st">"Sex"</span>, <span class="st">"Event"</span>, <span class="st">"Date"</span>)</span>
 <span id="cb2-4"><a href="#cb2-4"></a>    .with_columns((pl.col(<span class="st">"Mark [meters or seconds]"</span>) <span class="op">/</span> <span class="dv">3600</span>).alias(<span class="st">"Hours"</span>))</span>
 <span id="cb2-5"><a href="#cb2-5"></a>    .with_columns(</span>
@@ -333,26 +339,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-33"><a href="#cb2-33"></a>    chart, chart.mark_text(dy<span class="op">=-</span><span class="dv">10</span>, dx<span class="op">=</span><span class="dv">10</span>, angle<span class="op">=</span><span class="dv">320</span>).encode(text<span class="op">=</span><span class="st">"Last Name:N"</span>)</span>
 <span id="cb2-34"><a href="#cb2-34"></a>).facet(column<span class="op">=</span><span class="st">"Sex:N"</span>).resolve_scale(y<span class="op">=</span><span class="st">"independent"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display column-screen-inset-shaded" data-execution_count="6">
+<div class="cell-output cell-output-display column-screen-inset-shaded" data-execution_count="2">
 
 <style>
-  #altair-viz-6425bf8ffa904b2e82c59c713dfd6949.vega-embed {
+  #altair-viz-d1d25457721e4032902f241ec327722d.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-6425bf8ffa904b2e82c59c713dfd6949.vega-embed details,
-  #altair-viz-6425bf8ffa904b2e82c59c713dfd6949.vega-embed details summary {
+  #altair-viz-d1d25457721e4032902f241ec327722d.vega-embed details,
+  #altair-viz-d1d25457721e4032902f241ec327722d.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-6425bf8ffa904b2e82c59c713dfd6949"></div>
+<div id="altair-viz-d1d25457721e4032902f241ec327722d"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-6425bf8ffa904b2e82c59c713dfd6949") {
-      outputDiv = document.getElementById("altair-viz-6425bf8ffa904b2e82c59c713dfd6949");
+    if (outputDiv.id !== "altair-viz-d1d25457721e4032902f241ec327722d") {
+      outputDiv = document.getElementById("altair-viz-d1d25457721e4032902f241ec327722d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -641,13 +647,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About</span></span>
+      <a href="../contents/stats.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting to know the data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./about_me.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Hello, it’s me!</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../contents/about_me.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Hello, it’s me!</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
