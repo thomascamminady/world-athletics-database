@@ -7,7 +7,6 @@ Let's play around with the data a little bit.
 We will load the data and look at the top 10 marathon performances of all times.
 
 ```{python}
-# | column: screen-inset-shaded
 import polars as pl
 import altair as alt
 from camminapy.plot import altair_theme
@@ -38,12 +37,12 @@ chart = (
         .legend(None),
         tooltip=[f"{c}:N" for c in df.columns],
     )
-    .properties(width=650, height=300)
+    .properties(width=550, height=300)
     # .interactive()
 )
 alt.layer(
     chart, chart.mark_text(dy=-10, dx=10, angle=320).encode(text="Last Name:N")
-).facet(column="Sex:N").resolve_scale(y="independent")
+).facet(row="Sex:N").resolve_scale(y="independent")
 
 ```
 
@@ -52,7 +51,6 @@ alt.layer(
 We can also look at how world records have progressed over time.
 
 ```{python}
-# | column: screen-inset-shaded
 wr = (
     pl.read_csv("../data/data.csv", separator=";", try_parse_dates=True)
     .sort("Sex", "Event", "Date")
@@ -81,10 +79,10 @@ chart = (
         .legend(None),
         tooltip=[f"{c}:N" for c in df.columns],
     )
-    .properties(width=650, height=300)
+    .properties(width=550, height=300)
     # .interactive()
 )
 alt.layer(
     chart, chart.mark_text(dy=-10, dx=10, angle=320).encode(text="Last Name:N")
-).facet(column="Sex:N").resolve_scale(y="independent")
+).facet(row="Sex:N").resolve_scale(y="independent")
 ```
