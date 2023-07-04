@@ -47,3 +47,44 @@ alt.layer(
 
 ```
 
+
+
+We can also look at how world records have progressed over time.
+
+```{python}
+wr = (
+    pl.read_csv("data/data.csv", separator=";", try_parse_dates=True)
+    .sort("Sex", "Event", "Date")
+    .with_columns((pl.col("Mark [meters or seconds]") / 3600).alias("Hours"))
+    .with_columns(
+        (pl.col("Hours") == pl.col("Hours").cummin())
+        .over("Sex", "Event")
+        .alias("Performance has been a WR")
+    )
+    .filter(pl.col("Performance has been a WR"))
+    .filter(pl.col("Event") == "Marathon")
+    .with_columns(pl.col("Competitor").str.split(" ").list.last().alias("Last Name"))
+    .sort("Sex", "Hours")
+)
+
+print(wr)
+
+chart = (
+    alt.Chart(wr.to_pandas())
+    .mark_line(point=True, interpolate="step-after")
+    .encode(
+        x="Date:T",
+        y=alt.Y("Hours:Q").scale(zero=False),
+        color=alt.Color("Sex:N")
+        .scale(domain=["female", "male"], range=["purple", "orange"])
+        .title(None)
+        .legend(None),
+        tooltip=[f"{c}:N" for c in df.columns],
+    )
+    .properties(width=650, height=300)
+    # .interactive()
+)
+alt.layer(
+    chart, chart.mark_text(dy=-10, dx=10, angle=320).encode(text="Last Name:N")
+).facet(column="Sex:N").resolve_scale(y="independent")
+```
