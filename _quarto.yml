@@ -5,22 +5,25 @@ project:
   output-dir: docs
 
 book:
-  title: "World Athletics Database as a CSV file"
+  title: "World Athletics Database as a CSV File"
   author: "Thomas Camminady"
   date: "7/04/2023"
   chapters:
     - index.qmd
     - analytics.qmd
     - about_me.qmd
+  twitter-card: true
+  site-url: https://thomascamminady.github.io/world-athletics-database/
 execute:
   daemon: true
 
 toc: true
 number-sections: true
 
+
 format:
   html:
-    theme: cosmo
+    theme: mint
     page-layout: article
     code-fold: true
     code-line-numbers: true
