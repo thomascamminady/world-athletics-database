@@ -16,7 +16,7 @@ book:
     - contents/analytics.qmd
     - contents/about_me.qmd
   twitter-card: true
-  site-url: https://thomascamminady.github.io/world-athletics-database/
+  site-url: https://world-athletics-database.camminady.dev
 execute:
   daemon: true
 
