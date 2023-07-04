@@ -217,12 +217,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="1.1" class="anchored" data-anchor-id="get-the-data"><span class="header-section-number">1.1</span> Get the data</h2>
 <p>Copy the code below to download the full data set.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>pd.read_csv(</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="st">"https://raw.githubusercontent.com/thomascamminady/world-athletics-database/main/data/data.csv"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    delimiter<span class="op">=</span><span class="st">";"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    parse_dates<span class="op">=</span><span class="va">True</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2"></a>root <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/thomascamminady/"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>path <span class="op">=</span> <span class="st">"world-athletics-database/main/data/data.csv"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>pd.read_csv(root<span class="op">+</span>path, delimiter<span class="op">=</span><span class="st">";"</span>, parse_dates<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or find the source code on <a href="https://github.com/thomascamminady/world-athletics-database">Github</a>.</p>
 </section>
 <section id="development" class="level2" data-number="1.2">
