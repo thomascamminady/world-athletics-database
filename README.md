@@ -14,4 +14,4 @@ pd.read_csv(
 )
 ```
 
-See https://thomascamminady.github.io/world-athletics-database/ for more
+See https://world-athletics-database.camminady.dev/ for more
