@@ -1,0 +1,7 @@
+# Hello, it's me!
+
+Hey! It's me, Thomas. I scraped this data from [World Athletics](https://worldathletics.org).
+
+I have a couple of other data sets that you can [check out](https://www.camminady.dev/contents/datasets.html).
+
+If you like what I do, check out my [website](https://www.camminady.dev). Cheers!

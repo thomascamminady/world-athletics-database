@@ -10,6 +10,7 @@ import pandas as pd
 pd.read_csv(
     "https://raw.githubusercontent.com/thomascamminady/world-athletics-database/main/data/data.csv",
     delimiter=";",
+    parse_dates=True
 )
 ```
 

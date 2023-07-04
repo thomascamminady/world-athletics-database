@@ -11,6 +11,7 @@ book:
   chapters:
     - index.qmd
     - analytics.qmd
+    - about_me.qmd
 execute:
   daemon: true
 
