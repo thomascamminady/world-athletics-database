@@ -3,6 +3,8 @@
 project:
   type: book
   output-dir: docs
+resources:
+  - CNAME
 
 book:
   title: "World Athletics Database as a CSV File"
