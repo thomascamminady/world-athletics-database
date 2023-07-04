@@ -1,30 +1,28 @@
 
+
 project:
-  type: website
-  title: "world-athletics-database"
+  type: book
   output-dir: docs
 
+book:
+  title: "world-athletics-database"
+  author: "Thomas Camminady"
+  date: "7/04/2023"
+  chapters:
+    - index.qmd
+    - analytics.qmd
+execute:
+  daemon: true
 
 toc: true
 number-sections: true
 
 format:
   html:
+    theme: cosmo
     page-layout: article
     code-fold: true
     code-line-numbers: true
-    theme:
-      - default
 
 
 
-website:
-  title: "World Athletics Database"
-  open-graph: true
-
-  navbar:
-    right:
-      - index.qmd
-      - analytics.qmd
-      - icon: github
-        href: https://github.com/thomascamminady/world-athletics-database

@@ -7,9 +7,11 @@ Let's play around with the data a little bit.
 We will load the data and look at the top 10 marathon performances of all times.
 
 ```{python}
+# | column: screen-inset-shaded
 import polars as pl
 import altair as alt
 from camminapy.plot import altair_theme
+
 
 altair_theme()
 df = (
@@ -21,7 +23,11 @@ df = (
 )
 
 chart = (
-    alt.Chart(df)
+    alt.Chart(
+        df.with_columns(
+            pl.col("Competitor").str.split(" ").list.last().alias("Last Name")
+        )
+    )
     .mark_line(point=True)
     .encode(
         x="Rank:N",
@@ -30,14 +36,14 @@ chart = (
         .scale(domain=["female", "male"], range=["purple", "orange"])
         .title(None)
         .legend(None),
-        row=alt.Row("Sex:N").title(None),
         tooltip=[f"{c}:N" for c in df.columns],
     )
-    .properties(width=400)
-    .resolve_scale(y="independent")
-    .interactive()
+    .properties(width=650, height=300)
+    # .interactive()
 )
-chart
+alt.layer(
+    chart, chart.mark_text(dy=-10, dx=10, angle=320).encode(text="Last Name:N")
+).facet(column="Sex:N").resolve_scale(y="independent")
 
 ```
 
