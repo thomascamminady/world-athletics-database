@@ -4,6 +4,9 @@ jupyter: python3
 # About
 Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
+
+## Get the data
+
 Copy the code below to download the full data set.
 ```python
 import pandas as pd
@@ -15,8 +18,10 @@ pd.read_csv(
 )
 ```
 
+Or find the source code on [Github](https://github.com/thomascamminady/world-athletics-database).
 
-## Getting Started
+
+## Development
 
 First, clone the repository and navigate to the project directory. Then, install the necessary dependencies:
 
@@ -32,58 +37,3 @@ poetry run python world_athletics_database/postprocess.py
 ```
 
 **Note:** Parsing the data may take up to 20 minutes.
-
-## Data Dictionary
-These are the columns that are directly extracted from the Word Athletics database.
-
-- `Rank`: The rank of the record.
-- `Mark`: The mark or result of the event.
-- `Competitor`: The name of the competitor.
-- `DOB`: The date of birth of the competitor.
-- `Nat`: The nationality of the competitor.
-- `Pos`: The position of the competitor.
-- `Venue`: The venue where the event took place.
-- `Date`: The date when the record was made.
-- `Results Score`: The score of the results.
-- `Mark [meters or seconds]`: The mark of the event in metres or seconds.
-- `Event`: The name of the event.
-- `Wind`: The wind speed during the event.
-- `Sex`: The competitor's sex.
-
-## Data Sample
-
-Here's all the world record performances that are stored in the data set, sorted by date.
-
-First all world records for the women.
-```{python}
-import pandas as pd
-from IPython.display import Markdown
-from tabulate import tabulate
-
-df = pd.read_csv("data/data.csv", delimiter=";", parse_dates=True)
-
-Markdown(
-    tabulate(
-        df.loc[(df["Rank"] == 1) & (df["Sex"] == "female")][
-            ["Event", "Competitor", "Mark", "Date"]
-        ].sort_values("Date")
-    )
-)
-
-```
-
-Next, all world records for the men.
-
-```{python}
-
-df = pd.read_csv("data/data.csv", delimiter=";", parse_dates=True)
-
-Markdown(
-    tabulate(
-        df.loc[(df["Rank"] == 1) & (df["Sex"] == "male")][
-            ["Event", "Competitor", "Mark", "Date"]
-        ].sort_values("Date")
-    )
-)
-
-```
