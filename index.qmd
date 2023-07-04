@@ -4,6 +4,16 @@ jupyter: python3
 # About
 Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
+Copy the code below to download the full data set.
+```python
+import pandas as pd
+
+pd.read_csv(
+    "https://raw.githubusercontent.com/thomascamminady/world-athletics-database/main/data/data.csv",
+    delimiter=";",
+    parse_dates=True
+)
+```
 
 
 ## Getting Started
