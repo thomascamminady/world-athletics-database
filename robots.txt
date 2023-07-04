@@ -1,1 +1,1 @@
-Sitemap: https://thomascamminady.github.io/world-athletics-database/sitemap.xml
+Sitemap: https://world-athletics-database.camminady.dev/sitemap.xml
