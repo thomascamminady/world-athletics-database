@@ -1,6 +1,6 @@
 ---
 jupyter: python3
-title: Analytics
+title: A first dive into the data
 ---
 
 Let's play around with the data a little bit.
@@ -52,6 +52,7 @@ alt.layer(
 We can also look at how world records have progressed over time.
 
 ```{python}
+# | column: screen-inset-shaded
 wr = (
     pl.read_csv("data/data.csv", separator=";", try_parse_dates=True)
     .sort("Sex", "Event", "Date")
@@ -67,7 +68,6 @@ wr = (
     .sort("Sex", "Hours")
 )
 
-print(wr)
 
 chart = (
     alt.Chart(wr.to_pandas())
