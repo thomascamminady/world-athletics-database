@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "World Athletics Database as a CSV File",
     "section": "",
-    "text": "1 About\nSome 400k athlete performances for various events scraped from World Athletics."
+    "text": "1 About\nSome 400k athlete performances for various events scraped from World Athletics.\nThe data contains information about a variety of outdoor track and field events, as well as road running and walking events. World Athletics collects performances on the elite level. Results are measured in time or distance units; or points (for e.g. the decathlon). For example, running events have their results measured in hours/minutes/seconds, whereas the long and high jump have their results measured in meters. For some spring and jumping events, there are measurements of the wind reading."
   },
   {
     "objectID": "index.html#get-the-data",
