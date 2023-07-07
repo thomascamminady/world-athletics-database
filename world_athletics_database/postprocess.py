@@ -45,6 +45,12 @@ def postprocess_step1():
                 cols = df.columns
                 df = df.select(c for c in cols[:11])  # throw away all individual marks
 
+            if "Unnamed: 6" in df.columns:
+                df = df.drop("Unnamed: 6")
+            if "Unnamed: 7" in df.columns:
+                df = df.drop("Unnamed: 7")
+            df.write_csv(csv)
+
             df = df.with_columns(pl.col("Mark").cast(str)).with_columns(
                 pl.col("Mark")
                 .apply(transform_times)
@@ -61,9 +67,8 @@ def postprocess_step1():
 
         df = (
             pl.concat(df_list, how="diagonal")
-            .drop("Unnamed: 6", "Unnamed: 7")
-            .rename(mapping={"WIND": "Wind"})
-            .with_columns(
+            # .drop("Unnamed: 6", "Unnamed: 7")
+            .rename(mapping={"WIND": "Wind"}).with_columns(
                 pl.col("DOB").str.strptime(pl.Date, format="%d %b %Y", strict=False),
                 pl.col("Date").str.strptime(pl.Date, format="%d %b %Y", strict=False),
             )
@@ -206,6 +211,7 @@ def postprocess_step2():
     #     .over("Event", "Sex")
     #     .alias("Relative Mark")
     # )
+    # df = df.drop("")
     df.write_parquet("./data/data.parquet")
     df.write_csv("./data/data.csv", separator=";")
     # df.write_csv("./data/data.csv", separator=";")
