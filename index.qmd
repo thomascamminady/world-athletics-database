@@ -4,6 +4,11 @@ jupyter: python3
 # About
 Some 400k athlete performances for various events scraped from [World Athletics](https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/women/senior).
 
+The data contains information about a variety of outdoor track and field events, as well as road running and walking events.
+World Athletics collects performances on the elite level.
+Results are measured in time or distance units; or points (for e.g. the decathlon).
+For example, running events have their results measured in hours/minutes/seconds, whereas the long and high jump have their results measured in meters. For some spring and jumping events, there are measurements of the wind reading.
+
 
 ## Get the data
 
